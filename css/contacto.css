@@ -130,50 +130,59 @@ header {
   transform: scale(1.05);
 }
 
-.informacion-contacto {
-  margin-top: 30px;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #444;
-  text-align: center;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+
+.boton.volver {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #d63384;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
+.boton.volver:hover {
+  background-color: #3f5ee6;
+}
+
+
 .mapa {
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-    margin-top: 15px;
-    max-width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  margin-top: 15px;
+  max-width: 100%;
 }
 
 
 .estrellas,
 .estrellas3 {
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
-  z-index: -1; /* Estrellas detrás */
+  z-index: -1;
+  /* Estrellas detrás */
   overflow: hidden;
 }
 
 .contacto-page {
   position: relative;
-  z-index: 0; /* Contenido delante */
+  z-index: 0;
+  /* Contenido delante */
 }
 
 
 .estrellas::before {
   content: "";
   position: absolute;
-  width: 100%; height: 100%;
+  width: 100%;
+  height: 100%;
   background-image: radial-gradient(#d0ec35 2.5px, transparent 2.5px);
   background-size: 25px 25px;
   opacity: 0.7;
@@ -183,33 +192,23 @@ header {
 .estrellas::after {
   content: "";
   position: absolute;
-  width: 100%; height: 100%;
+  width: 100%;
+  height: 100%;
   background-image: radial-gradient(#bf76ff 1.5px, transparent 1.5px);
   background-size: 20px 20px;
   background-position: 12px 12px;
   opacity: 0.5;
   animation: estrellasAnimar 90s linear infinite reverse;
 }
-.facebook-link {
-  color: #1877f2;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 10px;
-}
 
-.facebook-link:hover {
-  text-decoration: underline;
-}
 .informacion-contacto p {
   font-size: 1.1rem;
   margin: 12px 0;
   display: flex;
   align-items: center;
+  justify-content: center; /* 🟢 Añadido */
   gap: 10px;
+  text-align: center;
 }
 
 .informacion-contacto i {
@@ -234,8 +233,13 @@ header {
 
 
 @keyframes estrellasAnimar {
-  0% { transform: translateY(0) translateX(0); }
-  100% { transform: translateY(-50%) translateX(-25%); }
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+
+  100% {
+    transform: translateY(-50%) translateX(-25%);
+  }
 }
 
 
