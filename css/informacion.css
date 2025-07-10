@@ -119,7 +119,9 @@
   z-index: 1;
   text-align: justify;
 }
-
+ i {
+      color: black !important;
+    }
 /* Título sección */
 .informacion-page .titulo-informacion {
   font-size: 2rem;

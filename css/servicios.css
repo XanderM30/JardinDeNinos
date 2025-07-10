@@ -143,6 +143,9 @@
   text-align: center;
 }
 
+i {
+  color: black !important;
+}
 
 .servicios-page .modulo-servicio {
   background-color: #fde4ec;
