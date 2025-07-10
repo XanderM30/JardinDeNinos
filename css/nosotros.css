@@ -1,0 +1,200 @@
+/* nosotros.css */
+
+.nosotros-page * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nosotros-page {
+  font-family: 'Fredoka', sans-serif;
+  background-color: #fff0f5;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding-bottom: 80px;
+  position: relative;
+}
+
+/* Encabezado */
+.nosotros-page header {
+  background-color: #fdffff;
+  padding: 20px;
+  text-align: center;
+}
+
+.nosotros-page .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nosotros-page .logo img {
+  width: 150px;
+  height: auto;
+}
+
+.nosotros-page .titulo-principal {
+  font-size: 2.5rem;
+  color: #f48fb1;
+  text-shadow: 1px 1px 2px #c07ca7;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.nosotros-page .titulo-principal .nombre {
+  color: #64b5f6;
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* Navegación */
+.nosotros-page .menu {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  padding: 0;
+}
+
+.nosotros-page .menu li {
+  list-style: none;
+}
+
+.nosotros-page .menu li a {
+  display: inline-block;
+  padding: 10px 18px;
+  background-color: #fcb5e8;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.nosotros-page .menu li a:hover,
+.nosotros-page .menu li a.active {
+  background-color: #64b5f6;
+  transform: scale(1.05);
+}
+
+/* Fondo Estrellas */
+.nosotros-page .estrellas,
+.nosotros-page .estrellas3 {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.nosotros-page .estrellas::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: radial-gradient(#d0ec35 2.5px, transparent 2.5px);
+  background-size: 25px 25px;
+  opacity: 0.7;
+  animation: estrellasAnimar 60s linear infinite;
+}
+
+.nosotros-page .estrellas::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: radial-gradient(#bf76ff 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
+  background-position: 12px 12px;
+  opacity: 0.5;
+  animation: estrellasAnimar 90s linear infinite reverse;
+}
+
+
+@keyframes estrellasAnimar {
+  0% { transform: translateY(0) translateX(0); }
+  100% { transform: translateY(-50%) translateX(-25%); }
+}
+
+/* Sección Nosotros */
+.nosotros-page .nosotros {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  position: relative;
+}
+
+.nosotros-page .titulo-seccion {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #f48fb1;
+  text-align: center;
+}
+
+/* Módulos */
+.nosotros-page .modulo-nosotros {
+  background-color: #fde4ec;
+  border-left: 6px solid #f48fb1;
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(100, 181, 246, 0.1);
+}
+
+.nosotros-page .modulo-nosotros h3 {
+  margin-bottom: 8px;
+  color: #64b5f6;
+}
+
+.nosotros-page .modulo-nosotros p {
+  margin: 0;
+}
+
+/* Botón volver */
+.nosotros-page .boton {
+  display: inline-block;
+  margin-top: 25px;
+  background-color: #f48fb1;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s;
+  animation: bounceIn 1s ease forwards;
+}
+
+.nosotros-page .boton:hover {
+  background-color: #ec407a;
+  transform: scale(1.1);
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.95); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Footer fijo */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0b0c0c;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  z-index: 10;
+  font-size: 0.9rem;
+}
